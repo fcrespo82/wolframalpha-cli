@@ -25,7 +25,7 @@ Get one at https://developer.wolframalpha.com/portal/apisignup.html""")
     with open(os.path.expanduser("~/.wolfram_key"), "w") as _file:
         _file.writelines(api_key)
 
-__version__ = '0.1'
+__version__ = '0.2'
 
 def main():
     if len(sys.argv) > 1:
