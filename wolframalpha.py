@@ -38,9 +38,9 @@ def main():
     for pod in re.findall(r'<pod.+?>.+?</pod>', resp.text, re.S):
         title = re.findall(r'<pod.+?title=[\'"](.+?)[\'"].*>', pod, re.S)
         parser = HTMLParser()
-        print(Fore.GREEN + parser.unescape("".join(title).strip()) + Fore.RESET)
+        print((Fore.GREEN + parser.unescape("".join(title).strip()) + Fore.RESET).encode(sys.stdout.encoding, 'replace'))
         for inner in re.findall(r'<plaintext>(.*?)</plaintext>', pod, re.S):
-            print(parser.unescape(inner.strip()))
+            print((parser.unescape(inner.strip()).encode(sys.stdout.encoding, 'replace')))
         print('')
 
 if __name__ == '__main__':
