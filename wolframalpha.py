@@ -30,6 +30,8 @@ __version__ = '0.2'
 def main():
     if len(sys.argv) > 1:
         query = " ".join(sys.argv[1:])
+    else:
+        query = raw_input('Enter query: ')
 
     url = u'http://api.wolframalpha.com/v2/query?input={q}&appid={API_KEY}&format=plaintext'.format(API_KEY = wolfram_alpha_key, q = quote(query))
 
