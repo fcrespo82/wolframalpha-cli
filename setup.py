@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name = "wolframalpha-cli",
-    version = "0.2",
+    version = "1.0",
     author = "Fernando Xavier de Freitas Crespo",
     author_email = "fernando82@gmail.com",
     description = ("Command Line Interface to run queries on WolframAlpha"),
@@ -14,7 +14,6 @@ setup(
     url = "https://github.com/fcrespo82/wolframalpha-cli",
     py_modules = ['wolframalpha'],
     classifiers = [
-        "Development Status :: 4 - Beta",
         "Environment :: Console",
         "Topic :: Utilities",
         "License :: OSI Approved :: MIT License",
